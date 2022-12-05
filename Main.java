@@ -1,22 +1,14 @@
-
-/**
- * Write a description of class Main here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import com.formdev.flatlaf.FlatLightLaf;
 public class Main {
-    /**
-     * Constructor for objects of class Main
-     */
+
     public static void main(String[] args) {
-        System.out.println(vasaFantazia());
+        FlatLightLaf.setup();
+        
+        
+        System.out.print('\u000C'); //vyčisti konzolu
+
+          
+        
+        
     }
-    
-    /*
-     * Fantazii sa medze nekladu
-     */
-    public static String vasaFantazia() {
-        return null;
-}
 }
