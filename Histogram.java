@@ -1,7 +1,5 @@
 import javax.swing.BorderFactory;
-import javax.swing.JFrame;
 import java.awt.Color;
-import java.awt.EventQueue;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -19,9 +17,11 @@ public class Histogram  {
     private JFreeChart chart;
     private ChartPanel chartPanel;
     
+    /**
+     * 
+     */
     public Histogram(Pozicia pozicia, int pocetKociek) {
         this.pocetKociek = pocetKociek;
-        //this.poleSuctovHodov = new int[] {10, 5, 4, 8, 5, 3, 2, 8, 4, 12, 5};
         this.nastavVelkostPola();
         this.pozicia = pozicia;
         this.poleSuctovHodov = new int[this.velkostPola];
@@ -32,33 +32,35 @@ public class Histogram  {
         this.vykresli();
     }
 
+    /**
+     * 
+     */
     public void vykresli() {
         this.dataset = this.vytvorDataset();
         this.chart = this.vytvorGraf(this.dataset);
         
         this.chartPanel.setChart(this.chart);
-        chartPanel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
-        chartPanel.setBackground(Color.white);
-        chartPanel.setBounds(this.pozicia.x, this.pozicia.y, this.pozicia.sirka, this.pozicia.vyska);
+        this.chartPanel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
+        this.chartPanel.setBackground(Color.white);
+        this.chartPanel.setBounds(this.pozicia.x, this.pozicia.y, this.pozicia.sirka, this.pozicia.vyska);
         Menu.getInstancia().vlozDoPanelaGraf(this.chartPanel);
     }
 
+    /**
+     * 
+     */
     private CategoryDataset vytvorDataset() {
         var data = new DefaultCategoryDataset();
         for (int i = 0; i < this.poleSuctovHodov.length; i++) {
             data.setValue(this.poleSuctovHodov[i], "Pocet", i + this.pocetKociek + "");
         }
-        /* Napriklad taketo data: pre jednotku nebol este sucet
-         * pre dvojku uz 3x ...
-        (0, "Pocet", "1");
-        (3, "Pocet", "2");
-        (10, "Pocet", "3");
-        */
         return data;
     }
 
+    /**
+     * 
+     */
     private JFreeChart vytvorGraf(CategoryDataset dataset) {
-
         JFreeChart barChart = ChartFactory.createBarChart(
                 "Početnosti súčtov hodov",
                 "",
@@ -70,20 +72,29 @@ public class Histogram  {
         return barChart;
     }
 
+    /**
+     * 
+     */
     public void vynulujGraf() {
-            for (int i = 0; i < this.poleSuctovHodov.length; i++) {
-                this.poleSuctovHodov[i] = 0;
-            }
+        for (int i = 0; i < this.poleSuctovHodov.length; i++) {
+            this.poleSuctovHodov[i] = 0;
+        }
     }
     
+    /**
+     * 
+     */
     public void nastavPocetKociek(int pocet) {
         this.pocetKociek = pocet;
         this.nastavVelkostPola();
         this.vykresli();
     }
     
+    /**
+     * 
+     */
     public void nastavVelkostPola() {
-        switch(this.pocetKociek) {
+        switch (this.pocetKociek) {
             case 1:
                 this.velkostPola = 6;
                 break;
@@ -100,8 +111,11 @@ public class Histogram  {
         this.poleSuctovHodov = new int[this.velkostPola];
     }
 
+    /**
+     * 
+     */
     public void pridajSucet(int sucet) {
-        switch(this.pocetKociek) {
+        switch (this.pocetKociek) {
             case 1:
                 this.poleSuctovHodov[sucet - 1] += 1;
                 break;
@@ -117,6 +131,9 @@ public class Histogram  {
         }
     }
     
+    /**
+     * 
+     */
     public void zobraz() {
         this.chartPanel.setVisible(true);
     }
