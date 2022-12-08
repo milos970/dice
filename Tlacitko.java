@@ -23,7 +23,12 @@ public class Tlacitko
     {
         this.button.setVisible(true);
     }
+
     
+    /**
+     * Text sa po klikaní cyklí
+     */
+
     public void aktivuj() 
     {
         if (this.aktivne == true) {

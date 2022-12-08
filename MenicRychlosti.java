@@ -13,15 +13,15 @@ public class MenicRychlosti  {
 
         this.slider.setMajorTickSpacing(10);
         
-        this.slider.setMinimum(MIN);
-        this.slider.setMaximum(MAX);
+        this.slider.setMinimum(MIN);  //Nastavuje spodnú hranicu intervalu prípustných hodnôt
+        this.slider.setMaximum(MAX);  //Nastavuje hornú hranicu intervalu prípustných hodnôt
         
         Hashtable labelTable = new Hashtable();
         labelTable.put( new Integer( 1 ), new JLabel("Normálne") );
         labelTable.put( new Integer( 10 ), new JLabel("Rýchlo") );
         this.slider.setLabelTable( labelTable );
 
-        this.slider.setPaintLabels(true);
+        this.slider.setPaintLabels(true);  //Zobrazuje texty pod sliderom
         this.slider.setVisible(false);
 
         Menu.getInstancia().vlozDoPanelaPonuka(this.slider);
