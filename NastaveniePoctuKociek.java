@@ -26,6 +26,7 @@ public class NastaveniePoctuKociek implements ActionListener  {
             Menu.getInstancia().vlozDoPanelaPonuka(this.radioButtons[i]);
         }
 
+        //pridá všetky inštancie do objektu bgroup, aby bola zabezpečená logika RadioButnov
         for (int i = 0; i < this.radioButtons.length; ++i) {
             this.bgroup.add(radioButtons[i]);
         }
@@ -41,6 +42,9 @@ public class NastaveniePoctuKociek implements ActionListener  {
         this.zvol();
     }
 
+    /**
+     * Aktivuje/deaktivuje všetky radioButny.
+     */
     public void aktivuj(boolean hodnota) 
     {
         for (int i = 0; i < this.radioButtons.length; ++i) {
@@ -48,6 +52,9 @@ public class NastaveniePoctuKociek implements ActionListener  {
         }
     }
 
+    /**
+     * 
+     */
     private void zvol() 
     {
         for (Enumeration<AbstractButton> buttons = this.bgroup.getElements(); buttons.hasMoreElements();) {

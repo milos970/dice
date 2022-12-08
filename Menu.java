@@ -14,22 +14,28 @@ import javax.swing.JFrame;
  *
  * @author ADMIN
  */
-public class Menu extends javax.swing.JFrame {
+public class Menu extends javax.swing.JFrame 
+{
     private static Menu instancia;
-    
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     /**
      * Creates new form Platno
      */
-    private Menu() {
+    private Menu() 
+    {
         initComponents();
         super.setTitle("Kocky");
         super.setLayout(null);
         super.setResizable(false);
         super.setPreferredSize(new Dimension(1200, 805));
-        super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        super.setAlwaysOnTop( true );
+        super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // ukončí aplikáciu po kliknutí na znak X
+        super.setAlwaysOnTop( true ); // okno nieje ničím prekryté
         
-        super.setLocationRelativeTo(null);
+        super.setLocationRelativeTo(null); // okno sa vždy zobrazí v strede
         
         super.setVisible(true);
         
@@ -37,27 +43,33 @@ public class Menu extends javax.swing.JFrame {
        super.setIconImage(img.getImage());
     }
     
-    public static Menu getInstancia() {
-        if (instancia == null) {
+    public static Menu getInstancia() 
+    {
+        if (instancia == null) 
+        {
             instancia = new Menu();
         }
         return instancia;
     }
     
     
-    public void vlozDoPanelaHra(Component komponent) {
+    public void vlozDoPanelaHra(Component komponent) 
+    {
         this.jPanel3.add(komponent);
     }
     
-    public void vlozDoPanelaPonuka(Component komponent) {
+    public void vlozDoPanelaPonuka(Component komponent) 
+    {
         this.jPanel2.add(komponent);
     }
     
-    public void vlozDoPanelaGraf(Component komponent) {
+    public void vlozDoPanelaGraf(Component komponent) 
+    {
         this.jPanel5.add(komponent);
     }
     
-    public void vlozDoPanelaNastavenie(Component komponent) {
+    public void vlozDoPanelaNastavenie(Component komponent) 
+    {
         this.jPanel4.add(komponent);
     }
 
@@ -68,7 +80,8 @@ public class Menu extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents() 
+    {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -180,42 +193,47 @@ public class Menu extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[]) 
+    {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+        try 
+        {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) 
+            {
+                if ("Nimbus".equals(info.getName())) 
+                {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException ex) 
+        {
             java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
+        } catch (InstantiationException ex) 
+        {
             java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
+        } catch (IllegalAccessException ex) 
+        {
             java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) 
+        {
             java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         FlatLightLaf.setup();
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
+        java.awt.EventQueue.invokeLater(() -> 
+        {
             new Menu().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
+    
     // End of variables declaration//GEN-END:variables
 }

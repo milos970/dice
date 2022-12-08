@@ -11,14 +11,16 @@ public class Kocka extends Obrazok
         super.setVisible(false);
         this.strany = new String[POCET_STRAN];
         
-        for (int i = 0; i < POCET_STRAN; ++i) {
+        for (int i = 0; i < POCET_STRAN; ++i) 
+        {
             this.strany[i] = "./obrazky/stranyKocky/" + (i + 1) + ".png";
         }
         
         
     }
     
-    public void zobraz() {
+    public void zobraz() 
+    {
         this.zobrazStranu(1);
         super.zobraz();
     }
@@ -28,18 +30,22 @@ public class Kocka extends Obrazok
         super.zmenObrazok(this.strany[strana - 1]);
     }
 
-    public void dalsiaStrana(boolean hodnota) {
-        if (hodnota) {
+    public void dalsiaStrana(boolean hodnota) 
+    {
+        if (hodnota) 
+        {
             this.cisloStrany = (this.cisloStrany + 1) % POCET_STRAN;
             this.zobrazStranu(this.cisloStrany + 1);
         }
     }
 
-    public int aktualnaStrana() {
+    public int aktualnaStrana() 
+    {
         return this.cisloStrany + 1;
     }
 
-    public int getPocetStran() {
+    public int getPocetStran() 
+    {
         return POCET_STRAN;
     }
 }

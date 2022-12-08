@@ -28,7 +28,8 @@ public class HodKockami
     public void zobrazKocky(int pocetKociek) 
     {
         this.pocetKociekNaZobrazenie = pocetKociek;
-        switch(pocetKociek) {
+        switch(pocetKociek) 
+        {
             case 1:
                 this.kocky[0].zmenPolohu(new Pozicia(320, 300,150,150));
                 this.kocky[0].zobraz();
@@ -38,7 +39,8 @@ public class HodKockami
                 this.kocky[3].setVisible(false);
                 break;
             case 2:
-                for (int i = 0; i < 2; ++i) {
+                for (int i = 0; i < 2; ++i) 
+                {
                     this.kocky[i].zmenPolohu(new Pozicia(250 + 200 * i, 300,150,150));
                     this.kocky[i].zobraz();
                 }
@@ -46,18 +48,21 @@ public class HodKockami
                 this.kocky[3].setVisible(false);
                 break;
             case 3:
-                for (int i = 0; i < 3; ++i) {
+                for (int i = 0; i < 3; ++i) 
+                {
                     this.kocky[i].zmenPolohu(new Pozicia(150 + 200 * i, 300,150,150));
                     this.kocky[i].zobraz();
                 }
                 this.kocky[3].setVisible(false);
                 break;
             case 4:
-                for (int i = 0; i < 4; ++i) {
+                for (int i = 0; i < 4; ++i) 
+                {
                     this.kocky[i].zmenPolohu(new Pozicia(250 + 200 * i, 220,150,150));
 
                     this.kocky[i].zobraz();
-                    if (i > 1) {
+                    if (i > 1) 
+                    {
                         this.kocky[i].zmenPolohu(new Pozicia(250 + 200 * (i - 2), 400,150,150 ));
                         this.kocky[i].zobraz();
                     }
@@ -71,7 +76,8 @@ public class HodKockami
         int sucetHodov = 0;
         int hodnotaHodu = 0;
 
-        for (int i = 0; i < this.pocetKociekNaZobrazenie; ++i) {
+        for (int i = 0; i < this.pocetKociekNaZobrazenie; ++i) 
+        {
             hodnotaHodu = this.random[i].sample();
             sucetHodov += hodnotaHodu;
             this.kocky[i].zobrazStranu(hodnotaHodu);

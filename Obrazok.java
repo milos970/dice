@@ -7,25 +7,31 @@ import java.io.IOException;
 import java.awt.Image;
 
 
-public class Obrazok extends JLabel {
+public class Obrazok extends JLabel 
+{
     
-    public Obrazok() {
+    public Obrazok() 
+    {
         super.setVisible(false);
     }
     
-    public void zobraz() {
+    public void zobraz() 
+    {
         super.setVisible(true);
     }
     
-    public void zmenObrazok(String cestaKSuboru) {
+    public void zmenObrazok(String cestaKSuboru) 
+    {
         super.setIcon(nacitajObrazok(cestaKSuboru));
     }
     
-    public void zmenPolohu(Pozicia pozicia) {
+    public void zmenPolohu(Pozicia pozicia) 
+    {
         super.setBounds(pozicia.x, pozicia.y, pozicia.sirka, pozicia.vyska);
     }
     
-    private ImageIcon nacitajObrazok(String cestaKObrazku) {   
+    private ImageIcon nacitajObrazok(String cestaKObrazku) 
+    {   
         BufferedImage obrazok = null;
         try
         {
