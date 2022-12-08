@@ -11,7 +11,8 @@ public class NastaveniePoctuKociek implements ActionListener  {
     private final JRadioButton[] radioButtons;
     private int zvolenaHodnota;
     
-    public NastaveniePoctuKociek(Pozicia pozicia)  {
+    public NastaveniePoctuKociek(Pozicia pozicia)  
+    {
         
         this.bgroup = new ButtonGroup();
         
@@ -35,18 +36,20 @@ public class NastaveniePoctuKociek implements ActionListener  {
     }
     
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) 
+    {
         this.zvol();
     }
 
-    public void aktivuj(boolean hodnota) {
+    public void aktivuj(boolean hodnota) 
+    {
         for (int i = 0; i < this.radioButtons.length; ++i) {
             this.radioButtons[i].setEnabled(hodnota);
         }
     }
 
-    private void zvol() {
-        
+    private void zvol() 
+    {
         for (Enumeration<AbstractButton> buttons = this.bgroup.getElements(); buttons.hasMoreElements();) {
             AbstractButton button = buttons.nextElement();
 
@@ -56,13 +59,15 @@ public class NastaveniePoctuKociek implements ActionListener  {
         }
     }
     
-    public void addActionListener(ActionListener actionListener) {
+    public void addActionListener(ActionListener actionListener) 
+    {
         for (int i = 0; i < this.radioButtons.length; ++i) {
             this.radioButtons[i].addActionListener(actionListener);
         }
     }
     
-    public int zvolena() {
+    public int zvolena() 
+    {
         return this.zvolenaHodnota;
     }
 }

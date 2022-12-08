@@ -1,7 +1,5 @@
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class NastavenieKociek {
     private final Kocka[] kocky;
@@ -21,7 +19,7 @@ public class NastavenieKociek {
             Kocka kocka = this.kocky[i];
             kocka.addMouseListener(new MouseAdapter(){
                     public void mouseClicked(MouseEvent e) {
-                        kocka.nextStrana(aktivovane);
+                        kocka.dalsiaStrana(aktivovane);
                     }                
                 });
         }
@@ -43,10 +41,10 @@ public class NastavenieKociek {
             case 1:
                 this.kocky[0].zmenPolohu(new Pozicia(130, 60,100,100));
                 this.kocky[0].zobraz();
-                
-                 this.kocky[1].setVisible(false);
-                 this.kocky[2].setVisible(false);
-                 this.kocky[3].setVisible(false);
+
+                this.kocky[1].setVisible(false);
+                this.kocky[2].setVisible(false);
+                this.kocky[3].setVisible(false);
                 break;
             case 2:
                 for (int i = 0; i < 2; ++i) {
@@ -66,7 +64,7 @@ public class NastavenieKociek {
             case 4:
                 for (int i = 0; i < 4; ++i) {
                     this.kocky[i].zmenPolohu(new Pozicia(70 + 120 * i, 15,100,100));
-                    
+
                     this.kocky[i].zobraz();
                     if (i > 1) {
                         this.kocky[i].zmenPolohu(new Pozicia(70 + 120 * (i - 2), 120,100,100 ));
@@ -76,7 +74,6 @@ public class NastavenieKociek {
                 break;
         }
     }
-
 
     public int sucetStran() {
         int sucet = 0;
