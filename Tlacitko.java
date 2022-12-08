@@ -9,7 +9,7 @@ public class Tlacitko
     public Tlacitko(Pozicia pozicia) 
     {
         this.button = new JButton("Spustiť");
-        this.button.setBounds
+        this.button.setBounds(pozicia.x, pozicia.y, pozicia.sirka, pozicia.vyska);
         this.button.setVisible(false);
         
         
@@ -18,9 +18,10 @@ public class Tlacitko
         this.aktivne = true;
     }
     
+    
     public void zobraz() 
     {
-        this.button.
+        this.button.setVisible(true);
     }
     
     public void aktivuj() 
@@ -29,14 +30,14 @@ public class Tlacitko
             this.button.setText("Stop");
             this.aktivne = false;
         } else {
-            this.button.;
+            this.button.setText("Spustiť");
             this.aktivne = true;
         }
     }
     
       
-    public void addActionListener
+    public void addActionListener(ActionListener actionListener) 
     {
-        this.button.addActionListener();
+        this.button.addActionListener(actionListener);
     }
 }
