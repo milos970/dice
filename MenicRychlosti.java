@@ -3,35 +3,35 @@ import java.util.Hashtable;
 import javax.swing.JLabel;
 
 public class MenicRychlosti  {
-    private static final int MIN = 45;
-    private static final int MAX = 500;
+    private static final int MIN = 1;
+    private static final int MAX = 10;
     private final JSlider slider;
     
     public MenicRychlosti(Pozicia pozicia) {
         this.slider = new JSlider();
-        this.slider.setBounds(pozicia.x, pozicia.y, pozicia.vyska, pozicia.sirka);
+        this.slider.setBounds(pozicia.x, pozicia.y, pozicia.sirka, pozicia.vyska);
 
-        this.slider.setMajorTickSpacing(85);
+        this.slider.setMajorTickSpacing(10);
         
         this.slider.setMinimum(MIN);
         this.slider.setMaximum(MAX);
         
         Hashtable labelTable = new Hashtable();
-        labelTable.put( new Integer( 70 ), new JLabel() );
-        labelTable.put( new Integer( 90 ), new JLabel() );
+        labelTable.put( new Integer( 1 ), new JLabel("Normálne") );
+        labelTable.put( new Integer( 10 ), new JLabel("Rýchlo") );
         this.slider.setLabelTable( labelTable );
 
-        this.slider.setPaintLabels(false);
-        this.slider.setVisible(true);
+        this.slider.setPaintLabels(true);
+        this.slider.setVisible(false);
 
         Menu.getInstancia().vlozDoPanelaPonuka(this.slider);
     }
 
     public void zobraz() {
-        this.slider.setVisible(false);
+        this.slider.setVisible(true);
     }
 
-    public double aktualnaHodnota() {
+    public int aktualnaHodnota() {
         return this.slider.getValue();
     }
 }
