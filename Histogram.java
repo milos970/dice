@@ -7,6 +7,9 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
 
+/**
+ * @author Lukáš Petrek
+ */
 public class Histogram  {
     private int[] poleSuctovHodov;
     private int velkostPola;
@@ -17,8 +20,12 @@ public class Histogram  {
     private JFreeChart chart;
     private ChartPanel chartPanel;
     
-    /**
+    /** 
+     * Konštruktor, nastaví atribúty, nastaví veľkosť poľa podľa počtu kociek
+     * Vytvorí nulové pole, vytvorí panel grafu, ktorý potom vykreslí cez metódu
      * 
+     * @param pozicia - parameter pozície ktorú si ukladáme do atribútu
+     * @param pocetKociek - parameter počtu kociek, ktoré budú v histograme
      */
     public Histogram(Pozicia pozicia, int pocetKociek) {
         this.pocetKociek = pocetKociek;
@@ -33,7 +40,8 @@ public class Histogram  {
     }
 
     /**
-     * 
+     * Naplní a vytvorí graf, ktorý potom nastaví aby sa vykreslil na pozícií
+     * a na správnom mieste v menu
      */
     public void vykresli() {
         this.dataset = this.vytvorDataset();
@@ -47,7 +55,8 @@ public class Histogram  {
     }
 
     /**
-     * 
+     * Vytvorenie dát pre graf cez cyklus
+     * @return vytvorené dáta
      */
     private CategoryDataset vytvorDataset() {
         var data = new DefaultCategoryDataset();
@@ -58,7 +67,7 @@ public class Histogram  {
     }
 
     /**
-     * 
+     * @param dataset - na základe parametra data vytvorí graf
      */
     private JFreeChart vytvorGraf(CategoryDataset dataset) {
         JFreeChart barChart = ChartFactory.createBarChart(
@@ -73,7 +82,7 @@ public class Histogram  {
     }
 
     /**
-     * 
+     * Vynuluje počty súčtov
      */
     public void vynulujGraf() {
         for (int i = 0; i < this.poleSuctovHodov.length; i++) {
@@ -82,7 +91,9 @@ public class Histogram  {
     }
     
     /**
-     * 
+     * Nastavuje počet kociek a upraví veľkosť poľa
+     * Pripraví prázdny graf
+     * @param pocet - aký počet kociek chceme nastaviť
      */
     public void nastavPocetKociek(int pocet) {
         this.pocetKociek = pocet;
@@ -91,7 +102,8 @@ public class Histogram  {
     }
     
     /**
-     * 
+     * Na základe počtu kociek určí a zmení akú veľkosť bude mať pole
+     * Následne vytvorí nové s novou veľkosťou
      */
     public void nastavVelkostPola() {
         switch (this.pocetKociek) {
@@ -112,7 +124,8 @@ public class Histogram  {
     }
 
     /**
-     * 
+     * Na základe počtu kociek a hodeného súčtu navýši v poli daný súčet o 1
+     * @param sucet - hodený súčet na kockách
      */
     public void pridajSucet(int sucet) {
         switch (this.pocetKociek) {
@@ -132,7 +145,7 @@ public class Histogram  {
     }
     
     /**
-     * 
+     * Zobrazenie panelu grafu
      */
     public void zobraz() {
         this.chartPanel.setVisible(true);
