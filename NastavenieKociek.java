@@ -7,7 +7,6 @@ public class NastavenieKociek {
     private int pocetKociek;
 
     public NastavenieKociek() {
-
         this.kocky = new Kocka[4];
 
         for (int i = 0; i < this.kocky.length; ++i) 
@@ -29,7 +28,6 @@ public class NastavenieKociek {
                 });
         }
         this.aktivovane = true;
-
     }
 
     public void pocetKociek(int pocet) {

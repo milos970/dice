@@ -10,14 +10,14 @@ public class NastaveniePoctuKociek implements ActionListener  {
     private final ButtonGroup bgroup;
     private final JRadioButton[] radioButtons;
     private int zvolenaHodnota;
-    
+
     public NastaveniePoctuKociek(Pozicia pozicia)  
     {
-        
+
         this.bgroup = new ButtonGroup();
-        
+
         this.radioButtons = new JRadioButton[POCET_KOCIEK_NA_VYBER];
-        
+
         for (int i = 0; i < this.radioButtons.length; ++i) {
             this.radioButtons[i] = new JRadioButton(String.valueOf(i + 1));
             this.radioButtons[i].setBounds(pozicia.x + (i * 50), pozicia.y, pozicia.sirka, pozicia.vyska);
@@ -30,12 +30,10 @@ public class NastaveniePoctuKociek implements ActionListener  {
         for (int i = 0; i < this.radioButtons.length; ++i) {
             this.bgroup.add(radioButtons[i]);
         }
-        
-        
 
         this.radioButtons[1].setSelected(true);
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent e) 
     {
@@ -53,7 +51,7 @@ public class NastaveniePoctuKociek implements ActionListener  {
     }
 
     /**
-     * 
+     * Vyhľadá hodnotu zvoleného radioButton.
      */
     private void zvol() 
     {
@@ -65,14 +63,14 @@ public class NastaveniePoctuKociek implements ActionListener  {
             }
         }
     }
-    
+
     public void addActionListener(ActionListener actionListener) 
     {
         for (int i = 0; i < this.radioButtons.length; ++i) {
             this.radioButtons[i].addActionListener(actionListener);
         }
     }
-    
+
     public int zvolena() 
     {
         return this.zvolenaHodnota;

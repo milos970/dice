@@ -1,4 +1,3 @@
-
 public class Kocka extends Obrazok
 {
     private static final int POCET_STRAN = 6;
@@ -7,18 +6,15 @@ public class Kocka extends Obrazok
 
     public Kocka() 
     {
-        
         super.setVisible(false);
         this.strany = new String[POCET_STRAN];
-        
+
         for (int i = 0; i < POCET_STRAN; ++i) 
         {
             this.strany[i] = "./obrazky/stranyKocky/" + (i + 1) + ".png";
         }
-        
-        
     }
-    
+
     public void zobraz() 
     {
         this.zobrazStranu(1);
