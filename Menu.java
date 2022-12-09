@@ -9,6 +9,7 @@ import java.awt.Component;
 import java.awt.Dimension;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import java.awt.BorderLayout;
 
 /**
  *
@@ -25,15 +26,15 @@ public class Menu extends javax.swing.JFrame {
         super.setTitle("Kocky");
         super.setLayout(null);
         super.setResizable(false);
-        super.setPreferredSize(new Dimension(1200, 805));
+        super.setPreferredSize(new Dimension(1500, 805));
         super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         super.setAlwaysOnTop( true );
         
         super.setLocationRelativeTo(null);
         
         super.setVisible(true);
-        
-       ImageIcon img = new ImageIcon("./obrazky/ikony/kocky.png");
+
+       ImageIcon img = new ImageIcon(getClass().getResource("/obrazky/ikony/kocky.png"));
        super.setIconImage(img.getImage());
     }
     
@@ -54,7 +55,9 @@ public class Menu extends javax.swing.JFrame {
     }
     
     public void vlozDoPanelaGraf(Component komponent) {
-        this.jPanel5.add(komponent);
+        this.jPanel5.setLayout(new BorderLayout());
+        this.jPanel5.setPreferredSize(new Dimension(380,280));
+        this.jPanel5.add(komponent, BorderLayout.CENTER);
     }
     
     public void vlozDoPanelaNastavenie(Component komponent) {
@@ -82,9 +85,9 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
-        jPanel2.setBackground(new java.awt.Color(51, 204, 255));
+        jPanel2.setBackground(new java.awt.Color(102, 204, 255));
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel4.setBackground(new java.awt.Color(255, 255, 153));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -101,7 +104,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 347, Short.MAX_VALUE)
+            .addGap(0, 535, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
