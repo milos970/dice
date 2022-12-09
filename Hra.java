@@ -1,4 +1,5 @@
-     public Hra()  {
+public class Hra {
+    public Hra()  {
         
 
         this.hodKockami = new HodKockami();
@@ -33,5 +34,58 @@
         this.vytvorene = false;
         this.pouzivatelomZastavene = false;
     }
+    
+    private void spust() 
+    {
+        int sucetHodov = 0;
+        int hodKociek =  0;
+        this.histogram.vynulujGraf();
+            
+        do 
+        {
+
+            try
+            {
+                this.thread.sleep(CAKANIE / (1 * this.menic.aktualnaHodnota()));
+            }
+            catch (InterruptedException ie)
+            {
+                ie.printStackTrace();
+            }  
+
+            //ak používateľ zastavil hru, je počítadlo vymazané a zvyšok aktivovaný pre ďalšie spustenie
+            //inak pokračuje hodom a nastavuje graf a počítadlo
+            if (this.pouzivatelomZastavene == true) {
+                this.tlacitko.aktivuj();
+                this.nastavenieKociek.aktivuj(true);
+                this.nastaveniePoctu.aktivuj(true);
+                this.bezi = false;
+                this.vytvorene = false;
+                this.pocitadlo.vynuluj();
+                this.thread.stop();
+                
+            } else {
+                sucetHodov = this.nastavenieKociek.sucetStran();
+                hodKociek = this.hodKockami.hod();
+                
+                this.histogram.pridajSucet(hodKociek);
+                this.histogram.vykresli();
+            
+                this.pocitadlo.zapocitaj();
+            }
+
+        } while(sucetHodov != hodKociek );
+        
+        //ked sa uspešne nájde súčet, počítadlo nenuluje, aktivuje zvyšok pre možné ďalšie spustenie
+        this.tlacitko.aktivuj();
+        this.nastavenieKociek.aktivuj(true);
+        this.nastaveniePoctu.aktivuj(true);
+        this.bezi = false;
+        this.vytvorene = false;
+    }
+    
+    
+}
+ 
 
   
