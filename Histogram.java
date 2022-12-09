@@ -7,9 +7,7 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
 
-/**
- * @author Lukáš Petrek
- */
+
 public class Histogram  {
     private int[] poleSuctovHodov;
     private int velkostPola;
