@@ -11,7 +11,7 @@ public class Kocka extends Obrazok
 
         for (int i = 0; i < POCET_STRAN; ++i) 
         {
-            this.strany[i] = "./obrazky/stranyKocky/" + (i + 1) + ".png";
+            this.strany[i] = "/obrazky/stranyKocky/" + (i + 1) + ".png";
         }
     }
 

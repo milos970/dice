@@ -30,18 +30,18 @@ public class Obrazok extends JLabel
 
     private ImageIcon nacitajObrazok(String cestaKObrazku) 
     {   
-        BufferedImage obrazok = null;
+         BufferedImage img = null;
         try
         {
-            obrazok = ImageIO.read(getClass().getResource(cestaKObrazku));
+             img = ImageIO.read(getClass().getResource(cestaKObrazku));
         }
         catch (IOException ioe)
         {
             ioe.printStackTrace();
         }
-
-        Image dimg = obrazok.getScaledInstance(super.getWidth(), super.getHeight(),
-                Image.SCALE_SMOOTH);
+        
+       Image dimg = img.getScaledInstance(super.getWidth(), super.getHeight(),
+        Image.SCALE_SMOOTH);
         return new ImageIcon(dimg);
     }
 }

@@ -21,7 +21,7 @@ public class NastaveniePoctuKociek implements ActionListener  {
         for (int i = 0; i < this.radioButtons.length; ++i) {
             this.radioButtons[i] = new JRadioButton(String.valueOf(i + 1));
             this.radioButtons[i].setBounds(pozicia.x + (i * 50), pozicia.y, pozicia.sirka, pozicia.vyska);
-            this.radioButtons[i].setVisible(true);
+            this.radioButtons[i].setVisible(false);
             this.radioButtons[i].setName(String.valueOf(i + 1));
             Menu.getInstancia().vlozDoPanelaPonuka(this.radioButtons[i]);
         }
