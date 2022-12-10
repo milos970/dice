@@ -33,7 +33,7 @@ public class Obrazok extends JLabel
         BufferedImage obrazok = null;
         try
         {
-            obrazok = ImageIO.read(new File(cestaKObrazku));
+            obrazok = ImageIO.read(getClass().getResource(cestaKObrazku));
         }
         catch (IOException ioe)
         {
