@@ -18,6 +18,7 @@ public class Kocka extends Obrazok
     public void zobraz() 
     {
         this.zobrazStranu(1);
+        this.cisloStrany = 0;
         super.zobraz();
     }
 
