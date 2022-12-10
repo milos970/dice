@@ -33,6 +33,14 @@ public class NastaveniePoctuKociek implements ActionListener  {
 
         this.radioButtons[1].setSelected(true);
     }
+    
+    public void zobraz() {
+        for (int i = 0; i < this.radioButtons.length; ++i) {
+            
+            this.radioButtons[i].setVisible(true);
+            
+        }
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) 
