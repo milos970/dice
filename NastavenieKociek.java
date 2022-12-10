@@ -44,42 +44,38 @@ public class NastavenieKociek {
 
     public void zobrazKocky(int pocetKociek) 
     {
-        this.pocetKociek = pocetKociek;
-        switch(pocetKociek) 
-        {
+         this.pocetKociek = pocetKociek;
+        switch(pocetKociek) {
             case 1:
-                this.kocky[0].zmenPolohu(new Pozicia(130, 60,100,100));
+                this.kocky[0].zmenPolohu(new Pozicia(220, 60,100,100));
                 this.kocky[0].zobraz();
-
-                this.kocky[1].setVisible(false);
-                this.kocky[2].setVisible(false);
-                this.kocky[3].setVisible(false);
+                
+                 this.kocky[1].setVisible(false);
+                 this.kocky[2].setVisible(false);
+                 this.kocky[3].setVisible(false);
                 break;
             case 2:
-                for (int i = 0; i < 2; ++i) 
-                {
-                    this.kocky[i].zmenPolohu(new Pozicia(70 + 120 * i, 60,100,100));
+                for (int i = 0; i < 2; ++i) {
+                    this.kocky[i].zmenPolohu(new Pozicia(150 + 120 * i, 60,100,100));
                     this.kocky[i].zobraz();
                 }
                 this.kocky[2].setVisible(false);
                 this.kocky[3].setVisible(false);
                 break;
             case 3:
-                for (int i = 0; i < 3; ++i) 
-                {
-                    this.kocky[i].zmenPolohu(new Pozicia(3 + 120 * i, 60,100,100));
+                for (int i = 0; i < 3; ++i) {
+                    this.kocky[i].zmenPolohu(new Pozicia(100 + 120 * i, 60,100,100));
                     this.kocky[i].zobraz();
                 }
                 this.kocky[3].setVisible(false);
                 break;
             case 4:
-                for (int i = 0; i < 4; ++i) 
-                {
-                    this.kocky[i].zmenPolohu(new Pozicia(70 + 120 * i, 15,100,100));
+                for (int i = 0; i < 4; ++i) {
+                    this.kocky[i].zmenPolohu(new Pozicia(150 + 120 * i, 15,100,100));
+                    
                     this.kocky[i].zobraz();
-                    if (i > 1) 
-                    {
-                        this.kocky[i].zmenPolohu(new Pozicia(70 + 120 * (i - 2), 120,100,100 ));
+                    if (i > 1) {
+                        this.kocky[i].zmenPolohu(new Pozicia(150 + 120 * (i - 2), 120,100,100 ));
                         this.kocky[i].zobraz();
                     }
                 }

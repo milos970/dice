@@ -5,7 +5,7 @@ public class Main {
         FlatLightLaf.setup();
         
         
-        
+        Hra hra = new Hra();
         System.out.print('\u000C'); //vyčisti konzolu
 
           
