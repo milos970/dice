@@ -5,7 +5,6 @@ import java.io.File;
 import javax.swing.JRadioButton;
 
 public class Hra implements ActionListener {
-
     private static final int CAKANIE = 1000;
     private static final int X = 200;
     private static final int Y = 200;
