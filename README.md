@@ -6,4 +6,5 @@
   <li>Java</li>
   <li>Java Swing</li>
   <li>Git</li>
+  <li>BlueJ</li>
 </ul>
