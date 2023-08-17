@@ -7,4 +7,6 @@
   <li>Java Swing</li>
   <li>Git</li>
   <li>BlueJ</li>
+  <li>Trello</li>
+  <li>Teams</li>
 </ul>
