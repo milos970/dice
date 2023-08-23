@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="kniznice">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/kniznice/jcommon-1.0.23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/kniznice/jfreechart-1.0.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/kniznice/flatlaf-2.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/kniznice/OSPRNG.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

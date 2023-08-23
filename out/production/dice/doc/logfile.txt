@@ -1,0 +1,41 @@
+Project documentation
+<---- javadoc command: ---->
+C:\Program Files\BlueJ FRI Edition\jdk\bin\javadoc.exe
+-sourcepath
+C:\Users\Blackburn\Desktop\Skola\US\Semestralka\UDS-XXX
+-source
+11
+-classpath
+C:\Program Files\BlueJ FRI Edition\lib\bluejcore.jar;C:\Program Files\BlueJ FRI Edition\lib\junit-4.11.jar;C:\Program Files\BlueJ FRI Edition\lib\hamcrest-core-1.3.jar;C:\Program Files\BlueJ FRI Edition\lib\lang-stride.jar;C:\Program Files\BlueJ FRI Edition\lib\javafx\lib\javafx.base.jar;C:\Program Files\BlueJ FRI Edition\lib\javafx\lib\javafx.controls.jar;C:\Program Files\BlueJ FRI Edition\lib\javafx\lib\javafx.fxml.jar;C:\Program Files\BlueJ FRI Edition\lib\javafx\lib\javafx.graphics.jar;C:\Program Files\BlueJ FRI Edition\lib\javafx\lib\javafx.media.jar;C:\Program Files\BlueJ FRI Edition\lib\javafx\lib\javafx.properties.jar;C:\Program Files\BlueJ FRI Edition\lib\javafx\lib\javafx.swing.jar;C:\Program Files\BlueJ FRI Edition\lib\javafx\lib\javafx.web.jar;C:\Users\Blackburn\Desktop\Skola\US\Semestralka\kniznice\flatlaf-2.6.jar;C:\Users\Blackburn\Desktop\Skola\US\Semestralka\kniznice\OSPRNG.jar;C:\Users\Blackburn\Desktop\Skola\US\Semestralka\Nový prieèinok\UDS-XXX+Graf\kniznice\jcommon-1.0.23.jar;C:\Users\Blackburn\Desktop\Skola\US\Semestralka\Nový prieèinok\UDS-XXX+Graf\kniznice\jfreechart-1.0.19.jar;C:\Program Files\BlueJ FRI Edition\lib\userlib\flatlaf-2.6.jar;C:\Program Files\BlueJ FRI Edition\lib\userlib\jcommon-1.0.23.jar;C:\Program Files\BlueJ FRI Edition\lib\userlib\jfreechart-1.0.19.jar;C:\Program Files\BlueJ FRI Edition\lib\userlib\OSPRNG.jar;C:\Users\Blackburn\Desktop\Skola\US\Semestralka\UDS-XXX
+-d
+C:\Users\Blackburn\Desktop\Skola\US\Semestralka\UDS-XXX\doc
+-encoding
+UTF-8
+-charset
+UTF-8
+-doctitle
+UDS-XXX
+-windowtitle
+UDS-XXX
+-author
+-version
+-nodeprecated
+-package
+-Xdoclint:none
+-link
+https://docs.oracle.com/en/java/javase/11/docs/api/
+C:\Users\Blackburn\Desktop\Skola\US\Semestralka\UDS-XXX/Histogram.java
+<---- end of javadoc command ---->
+Loading source file C:\Users\Blackburn\Desktop\Skola\US\Semestralka\UDS-XXX\Histogram.java...
+Constructing Javadoc information...
+C:\Users\Blackburn\Desktop\Skola\US\Semestralka\UDS-XXX\Histogram.java:17: error: cannot find symbol
+    private Pozicia pozicia;
+            ^
+  symbol:   class Pozicia
+  location: class Histogram
+C:\Users\Blackburn\Desktop\Skola\US\Semestralka\UDS-XXX\Histogram.java:30: error: cannot find symbol
+    public Histogram(Pozicia pozicia, int pocetKociek) {
+                     ^
+  symbol:   class Pozicia
+  location: class Histogram
+2 errors
