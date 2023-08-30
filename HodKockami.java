@@ -75,11 +75,10 @@ public class HodKockami
     public int hod()
     {
         int sucetHodov = 0;
-        int hodnotaHodu = 0;
 
         for (int i = 0; i < this.pocetKociekNaZobrazenie; ++i) 
         {
-            hodnotaHodu = (this.random[i].nextInt(6) + 1);
+            int hodnotaHodu = (this.random[i].nextInt(6) + 1);
             sucetHodov += hodnotaHodu;
             this.kocky[i].zobrazStranu(hodnotaHodu);
         }

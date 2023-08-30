@@ -1,14 +1,9 @@
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.Timer;
-import java.io.File;
 import javax.swing.JRadioButton;
 
 public class Hra implements ActionListener {
     private static final int CAKANIE = 1000;
-    private static final int X = 200;
-    private static final int Y = 200;
-    
     private final NastavenieKociek nastavenieKociek;
     private final NastaveniePoctuKociek nastaveniePoctu;
     private final HodKockami hodKockami;
@@ -67,20 +62,15 @@ public class Hra implements ActionListener {
     public void actionPerformed(ActionEvent e) 
     {
 
-        if (this.vytvorene == false) {
+        if (!this.vytvorene) {
             this.vytvorene = true;
             this.thread = null;
-            this.thread = new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        spust();
-                    }
-                }); 
+            this.thread = new Thread(this::spust);
         }
 
         //pokial hra nebezi a je kliknuté na RadioButton
         //osetruje prípad, kedy je kliknuté na rovnaký RadioButton
-        if (bezi == false && (e.getSource() instanceof JRadioButton)) {
+        if (!bezi && (e.getSource() instanceof JRadioButton)) {
             if (this.zvolena == this.nastaveniePoctu.zvolena()) {
                 return;
             }
@@ -96,7 +86,7 @@ public class Hra implements ActionListener {
         }
 
         //spustí hru
-        if (bezi == false) {
+        if (!bezi) {
             this.pocitadlo.vynuluj();
             this.nastavenieKociek.aktivuj(false);
             this.nastaveniePoctu.aktivuj(false);
@@ -121,7 +111,7 @@ public class Hra implements ActionListener {
 
             try
             {
-                this.thread.sleep(CAKANIE / (1 * this.menic.aktualnaHodnota()));
+                Thread.sleep(CAKANIE / (this.menic.aktualnaHodnota()));
             }
             catch (InterruptedException ie)
             {
@@ -130,7 +120,7 @@ public class Hra implements ActionListener {
 
             //ak používateľ zastavil hru, je počítadlo vymazané a zvyšok aktivovaný pre ďalšie spustenie
             //inak pokračuje hodom a nastavuje graf a počítadlo
-            if (this.pouzivatelomZastavene == true) {
+            if (this.pouzivatelomZastavene) {
                 this.tlacitko.aktivuj();
                 this.nastavenieKociek.aktivuj(true);
                 this.nastaveniePoctu.aktivuj(true);

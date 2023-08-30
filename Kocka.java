@@ -41,8 +41,4 @@ public class Kocka extends Obrazok
         return this.cisloStrany + 1;
     }
 
-    public int getPocetStran() 
-    {
-        return POCET_STRAN;
-    }
 }

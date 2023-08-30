@@ -27,18 +27,18 @@ public class NastaveniePoctuKociek implements ActionListener  {
         }
 
         //pridá všetky inštancie do objektu bgroup, aby bola zabezpečená logika RadioButnov
-        for (int i = 0; i < this.radioButtons.length; ++i) {
-            this.bgroup.add(radioButtons[i]);
+        for (JRadioButton radioButton : this.radioButtons) {
+            this.bgroup.add(radioButton);
         }
 
         this.radioButtons[1].setSelected(true);
     }
     
     public void zobraz() {
-        for (int i = 0; i < this.radioButtons.length; ++i) {
-            
-            this.radioButtons[i].setVisible(true);
-            
+        for (JRadioButton radioButton : this.radioButtons) {
+
+            radioButton.setVisible(true);
+
         }
     }
 
@@ -53,8 +53,8 @@ public class NastaveniePoctuKociek implements ActionListener  {
      */
     public void aktivuj(boolean hodnota) 
     {
-        for (int i = 0; i < this.radioButtons.length; ++i) {
-            this.radioButtons[i].setEnabled(hodnota);
+        for (JRadioButton radioButton : this.radioButtons) {
+            radioButton.setEnabled(hodnota);
         }
     }
 
@@ -74,8 +74,8 @@ public class NastaveniePoctuKociek implements ActionListener  {
 
     public void addActionListener(ActionListener actionListener) 
     {
-        for (int i = 0; i < this.radioButtons.length; ++i) {
-            this.radioButtons[i].addActionListener(actionListener);
+        for (JRadioButton radioButton : this.radioButtons) {
+            radioButton.addActionListener(actionListener);
         }
     }
 

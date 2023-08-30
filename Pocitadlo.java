@@ -36,10 +36,6 @@ public class Pocitadlo
         this.pocet = 0;
         this.label.setText(String.valueOf(this.pocet));
     }
-/**vráti aktuálnu hodnotu počítadla */
-    public int getPocet() 
-    {
-        return this.pocet;
-    }
+
 
 }

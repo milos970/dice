@@ -31,7 +31,7 @@ public class Tlacitko
 
     public void aktivuj() 
     {
-        if (this.aktivne == true) {
+        if (this.aktivne) {
             this.button.setText("Stop");
             this.aktivne = false;
         } else {

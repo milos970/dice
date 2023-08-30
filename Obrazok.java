@@ -2,7 +2,6 @@ import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import java.io.File;
 import java.io.IOException;
 import java.awt.Image;
 

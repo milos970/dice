@@ -12,11 +12,9 @@ public class Histogram  {
     private int[] poleSuctovHodov;
     private int velkostPola;
     private int pocetKociek;
-    private Pozicia pozicia;
-    
-    private CategoryDataset dataset;
+    private final Pozicia pozicia;
     private JFreeChart chart;
-    private ChartPanel chartPanel;
+    private final ChartPanel chartPanel;
     
     /** 
      * Konštruktor, nastaví atribúty, nastaví veľkosť poľa podľa počtu kociek
@@ -42,8 +40,8 @@ public class Histogram  {
      * a na správnom mieste v menu
      */
     public void vykresli() {
-        this.dataset = this.vytvorDataset();
-        this.chart = this.vytvorGraf(this.dataset);
+        CategoryDataset dataset = this.vytvorDataset();
+        this.chart = this.vytvorGraf(dataset);
         
         this.chartPanel.setChart(this.chart);
         this.chartPanel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
@@ -59,7 +57,7 @@ public class Histogram  {
     private CategoryDataset vytvorDataset() {
         var data = new DefaultCategoryDataset();
         for (int i = 0; i < this.poleSuctovHodov.length; i++) {
-            data.setValue(this.poleSuctovHodov[i], "Pocet", i + this.pocetKociek + "");
+            data.setValue(this.poleSuctovHodov[i], "Pocet", String.valueOf(i + this.pocetKociek));
         }
         return data;
     }
@@ -68,15 +66,14 @@ public class Histogram  {
      * @param dataset - na základe parametra data vytvorí graf
      */
     private JFreeChart vytvorGraf(CategoryDataset dataset) {
-        JFreeChart barChart = ChartFactory.createBarChart(
+
+        return ChartFactory.createBarChart(
                 "Početnosti súčtov hodov",
                 "",
                 "Počet",
                 dataset,
                 PlotOrientation.VERTICAL,
                 false, true, false);
-
-        return barChart;
     }
 
     /**
@@ -141,11 +138,5 @@ public class Histogram  {
                 break;
         }
     }
-    
-    /**
-     * Zobrazenie panelu grafu
-     */
-    public void zobraz() {
-        this.chartPanel.setVisible(true);
-    }
+
 }

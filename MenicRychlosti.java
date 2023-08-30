@@ -17,8 +17,8 @@ public class MenicRychlosti  {
         this.slider.setMaximum(MAX);  //Nastavuje hornú hranicu intervalu prípustných hodnôt
         
         Hashtable labelTable = new Hashtable();
-        labelTable.put( Integer.valueOf(1), new JLabel("Normálne") );
-        labelTable.put( Integer.valueOf(10), new JLabel("Rýchlo") );
+        labelTable.put( 1, new JLabel("Normálne") );
+        labelTable.put( 10, new JLabel("Rýchlo") );
         this.slider.setLabelTable( labelTable );
 
         this.slider.setPaintLabels(true);  //Zobrazuje texty pod sliderom
