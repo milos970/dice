@@ -1,8 +1,9 @@
-import OSPRNG.UniformDiscreteRNG;
+import java.util.SplittableRandom;
+
 public class HodKockami
 {
     private static final int POCET_KOCIEK = 4;
-    private final UniformDiscreteRNG[] random;
+    private final SplittableRandom[] random;
     private final Kocka[] kocky;
     private int pocetKociekNaZobrazenie;
 
@@ -16,11 +17,11 @@ public class HodKockami
             Menu.getInstancia().vlozDoPanelaHra(this.kocky[i]);
         }
 
-        this.random = new UniformDiscreteRNG[POCET_KOCIEK];
+        this.random = new SplittableRandom[POCET_KOCIEK];
 
         for (int i = 0; i < POCET_KOCIEK; ++i) 
         {
-            this.random[i] = new UniformDiscreteRNG(1,this.kocky[i].getPocetStran());
+            this.random[i] = new SplittableRandom();
         }
 
     }
@@ -78,7 +79,7 @@ public class HodKockami
 
         for (int i = 0; i < this.pocetKociekNaZobrazenie; ++i) 
         {
-            hodnotaHodu = this.random[i].sample();
+            hodnotaHodu = (this.random[i].nextInt(6) + 1);
             sucetHodov += hodnotaHodu;
             this.kocky[i].zobrazStranu(hodnotaHodu);
         }
