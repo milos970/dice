@@ -11,6 +11,8 @@ public class Obrazok extends JLabel
     public Obrazok() 
     {
         super.setVisible(false);
+        
+        
     }
 
     public void zobraz() 
