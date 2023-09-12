@@ -5,7 +5,7 @@
   <li>Setting of the roll speed</li>
   <li>Visualization of the number of sums</li>
 </ul>
-<h2>Požiadavky na spustenie</h2>
+<h2>Requirements</h2>
 <ul>
   <li>JDK 20</li>
 </ul>
