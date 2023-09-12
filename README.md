@@ -1,17 +1,16 @@
 <h1>Dice</h1>
-<h2>Popis</h2>
+<h2>Description</h2>
 <ul>
-  <li>Možnosť voľby počtu kociek (1-4)</li>
-  <li>Nastavenie rýchlosti hodov</li>
-  <li>Vizualizácia počtu súčtov</li>
-  <li>Využitie vlákien</li>
+  <li>Possibility of choosing the number of cubes (1-4)</li>
+  <li>Setting of the roll speed</li>
+  <li>Visualization of the number of sums</li>
 </ul>
 <h2>Požiadavky na spustenie</h2>
 <ul>
-  <li>JRE 20</li>
+  <li>JDK 20</li>
 </ul>
 
-<h2>Jazyky & Frameworky & Nástroje</h2>
+<h2>Languages & Frameworks & Tools</h2>
 <ul>
   <li>Java</li>
   <li>Java Swing</li>
