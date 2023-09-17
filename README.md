@@ -3,7 +3,7 @@
 <ul>
   <li>Possibility of choosing the number of cubes (1-4)</li>
   <li>Setting of the roll speed</li>
-  <li>Visualization of the number of sums</li>
+  <li>Histogram visualization</li>
 </ul>
 <h2>Requirements</h2>
 <ul>
