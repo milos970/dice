@@ -1,6 +1,6 @@
 <h1>Dice</h1>
 
-![me](https://github.com/milos970/assets/blob/d923659d2d235eb1980aaafbed1f9fe103e0ca20/images/dice.gif)
+
 
 <h2>Description</h2>
 <ul>
@@ -23,3 +23,7 @@
   <li>Trello</li>
   <li>Teams</li>
 </ul>
+
+<h2>Preview</h2>
+
+![me](https://github.com/milos970/assets/blob/d923659d2d235eb1980aaafbed1f9fe103e0ca20/images/dice.gif)
