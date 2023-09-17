@@ -1,4 +1,7 @@
 <h1>Dice</h1>
+
+![me](https://github.com/milos970/assets/blob/d923659d2d235eb1980aaafbed1f9fe103e0ca20/images/dice.gif)
+
 <h2>Description</h2>
 <ul>
   <li>Possibility of choosing the number of cubes (1-4)</li>
