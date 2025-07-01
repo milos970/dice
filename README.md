@@ -1,8 +1,8 @@
-<h1>Dice</h1>
+# 📊 Dice
 
 
 
-<h2>Description</h2>
+## 📝 Description
 <ul>
   <li>Possibility of choosing the number of cubes (1-4)</li>
   <li>Setting of the roll speed</li>
@@ -13,7 +13,9 @@
   <li>JDK 20</li>
 </ul>
 
-<h2>Languages & Frameworks & Tools</h2>
+## 🧰 Technologies
+
+### 🔹 Languages & Frameworks  
 <ul>
   <li>Java</li>
   <li>Java Swing</li>
